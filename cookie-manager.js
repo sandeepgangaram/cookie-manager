@@ -105,6 +105,15 @@
 
       return allCookies;
     },
+
+    /**
+     * Remove all cookies
+     *
+     */
+    clear: function () {
+      var allCookies = this.getAll();
+      allCookies.forEach((cookie) => this.remove(cookie.key));
+    },
   };
 
   window.CookieManager = CookieManager;
