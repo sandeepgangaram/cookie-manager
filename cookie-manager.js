@@ -55,14 +55,16 @@
      *
      */
     get: function (name) {
-      var allCookies = document.cookie
-        .split(";")
-        .map((cookie) => cookie.trim().split("="));
+      var allCookies = document.cookie.split(";").map((cookie) => {
+        var cookiePair = cookie.trim().split("=");
 
-      var selectedCookie = allCookies.find((cookie) => cookie[0] === name);
+        return { key: cookiePair[0], value: cookiePair[1] };
+      });
+
+      var selectedCookie = allCookies.find((cookie) => cookie.key === name);
 
       if (selectedCookie != null) {
-        return selectedCookie[1];
+        return selectedCookie.value;
       }
     },
 
@@ -87,6 +89,21 @@
      */
     remove: function (name) {
       this.set(name, "", -1);
+    },
+
+    /**
+     *
+     * Get All Cookies
+     *
+     */
+    getAll: function (name) {
+      var allCookies = document.cookie.split(";").map((cookie) => {
+        var cookiePair = cookie.trim().split("=");
+
+        return { key: cookiePair[0], value: cookiePair[1] };
+      });
+
+      return allCookies;
     },
   };
 
