@@ -3,12 +3,12 @@
  *
  * cookie-manager.js
  * simple, fast and lightweight cookies management library.
- * 27-08-2023 - version 1.0
- * {REPO URL}
+ * 27.08.2023 - version 1.0
+ * https://github.com/sandeepgangaram/cookie-manager
  *
- * Copyright 2023 Sandeep Kumar Gangaram <gangaramsandeep@gmail.com>
+ * Copyright 2023 Open
  * Release under MIT license
- * {LICENSE URL}
+ * https://github.com/sandeepgangaram/cookie-manager/blob/master/LICENSE.md
  *
  *
  */
