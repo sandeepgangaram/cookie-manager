@@ -65,6 +65,29 @@
         return selectedCookie[1];
       }
     },
+
+    /**
+     *
+     * Update Cookie
+     * @param {String} name cookie name
+     * @param {String} value cookie value
+     * @param {Number} [expires] cookie expiration in days
+     * @param {String} [domain] cookie domain
+     * @param {String} [path] cookie path
+     * @param {Boolean} [secure] cookies ssl flag
+     */
+    update: function (name, value, expires, domain, path, secure) {
+      this.set(name, value, expires, domain, path, secure);
+    },
+
+    /**
+     *
+     * Remove cookie
+     * @param {String} name
+     */
+    remove: function (name) {
+      this.set(name, "", -1);
+    },
   };
 
   window.CookieManager = CookieManager;
