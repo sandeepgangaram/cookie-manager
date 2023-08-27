@@ -1,1 +1,3 @@
-console.log('index.js')
+window.onload = function () {
+  console.log(window.CookieManager);
+};

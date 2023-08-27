@@ -12,3 +12,11 @@
  *
  *
  */
+
+(function (window, document) {
+  "use strict";
+
+  var CookieManager = { test: "test" };
+
+  window.CookieManager = CookieManager;
+})(window, document);
